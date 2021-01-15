@@ -1,0 +1,51 @@
+#hero {
+  height: 91vh;
+}
+.heroBg {
+  width: 100%;
+  height: 100%;
+  > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+.heroBg .container {
+  position: relative;
+  .hero-content {
+    margin-top: 18%;
+    color: #fff;
+    > h1 {
+      text-transform: uppercase;
+      font-weight: 600;
+      @media #{$tablet} {
+        font-size: 4rem;
+      }
+    }
+    .heroAnim-wrapper {
+      > span {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.heroBtn-resume {
+  border: none;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #000;
+  color: #fff;
+  transition: 0.3s;
+  &:hover {
+    background: #013648;
+  }
+}

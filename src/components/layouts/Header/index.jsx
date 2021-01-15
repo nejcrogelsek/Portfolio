@@ -18,7 +18,7 @@ const Header = ({ toggle }) => {
   return (
     <>
       <Nav>
-        <NavbarContainer>
+        <NavbarContainer className='container'>
           <NavLogo to='/'>
             <NavLogoImg src={Favicon} alt='NR' />
           </NavLogo>
@@ -39,9 +39,6 @@ const Header = ({ toggle }) => {
               <NavLinks to='signup'>Sign Up</NavLinks>
             </NavItem>
           </NavMenu>
-          <NavBtn>
-            <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>

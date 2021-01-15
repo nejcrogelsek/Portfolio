@@ -5,14 +5,12 @@ import {
   CloseIcon,
   SidebarWrapper,
   SidebarMenu,
-  SideBtnWrap,
   SidebarLink,
-  SidebarRoute,
 } from "./SidebarElements";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <SidebarContainer isOpen={isOpen}>
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
@@ -31,9 +29,6 @@ const Sidebar = ({ isOpen, toggle }) => {
             Sign Up
           </SidebarLink>
         </SidebarMenu>
-        <SideBtnWrap>
-          <SidebarRoute to='/signin'>Sign In</SidebarRoute>
-        </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
   );
