@@ -4,6 +4,7 @@ import HeroSection from "../components/HeroSection";
 import Header from "../components/layouts/Header";
 import Sidebar from "../components/layouts/Sidebar";
 import SkillsSection from "../components/SkillsSection";
+import ToolsSection from "../components/ToolsSection";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,7 @@ const Home = () => {
       <AboutSection />
       {/* Projects section */}
       <SkillsSection />
+      <ToolsSection />
     </>
   );
 };
