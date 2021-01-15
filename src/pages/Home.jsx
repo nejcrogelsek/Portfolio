@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/layouts/Header";
 import Sidebar from "../components/layouts/Sidebar";
 
 const Home = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-      <Header />
-      <Sidebar />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Header toggle={toggle} />
     </>
   );
 };

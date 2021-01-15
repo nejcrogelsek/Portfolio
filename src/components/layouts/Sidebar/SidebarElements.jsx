@@ -11,11 +11,11 @@ export const SidebarContainer = styled.aside`
   background: #0d0d0d;
   display: grid;
   align-items: center;
-  top: 0;
+  bottom: 0;
   left: 0;
-  transition: 0.3 ease-in-out;
+  transition: 0.3s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
-  top: ${({ isOpen }) => (isOpen ? "0px" : "100%")};
+  bottom: ${({ isOpen }) => (isOpen ? "0px" : "100%")};
 `;
 
 export const CloseIcon = styled(FaTimes)`

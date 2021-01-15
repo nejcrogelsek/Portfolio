@@ -14,7 +14,7 @@ import {
   NavLogoImg,
 } from "./HeaderElements";
 
-const Header = () => {
+const Header = ({ toggle }) => {
   return (
     <>
       <Nav>
@@ -22,7 +22,7 @@ const Header = () => {
           <NavLogo to='/'>
             <NavLogoImg src={Favicon} alt='NR' />
           </NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
