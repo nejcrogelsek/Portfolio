@@ -3,7 +3,7 @@ import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
-  background: transparent;
+  background: #000;
   height: 9vh;
   /*margin-top: -80px;*/
   display: flex;
