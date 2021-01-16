@@ -8,7 +8,7 @@ import AdobePhotoshop from "../assets/images/tools/adobe_photoshop.svg";
 
 const ToolSection = () => {
   return (
-    <section id='skills' className='reusable-container'>
+    <section id='tools' className='reusable-container'>
       <div className='container'>
         <div className='row text-center reusable-top-section'>
           <div className='col-12'>

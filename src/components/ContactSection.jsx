@@ -25,7 +25,10 @@ const ContactSection = () => {
         (result) => {
           console.log(result.text);
           toast.success("Thank you for you message 😊");
-          e.target.reset();
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
         },
         (error) => {
           console.log(error.text);

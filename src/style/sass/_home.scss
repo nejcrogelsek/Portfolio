@@ -18,10 +18,16 @@
 .heroBg .container {
   position: relative;
   .hero-content {
-    margin-top: 18%;
+    margin-top: 50%;
     color: #fff;
+    @media #{$mobile} {
+      margin-top: 30%;
+    }
+    @media #{$tablet} {
+      margin-top: 18%;
+    }
     @media #{$large} {
-      margin-top: 13%;
+      margin-top: 18%;
     }
     > h1 {
       text-transform: uppercase;

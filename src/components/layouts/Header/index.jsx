@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import Favicon from "../../../assets/images/favicon.png";
 import {
@@ -15,9 +16,23 @@ import {
 } from "./HeaderElements";
 
 const Header = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 100) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
   return (
     <>
-      <Nav>
+      <Nav scrollNav={scrollNav}>
         <NavbarContainer className='container'>
           <NavLogo to='/'>
             <NavLogoImg src={Favicon} alt='NR' />
@@ -27,16 +42,19 @@ const Header = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
+              <NavLinks to='hero'>Home</NavLinks>
+            </NavItem>
+            <NavItem>
               <NavLinks to='about'>About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='discover'>Discover</NavLinks>
+              <NavLinks to='skills'>Skills</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='services'>Services</NavLinks>
+              <NavLinks to='tools'>Tools</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='signup'>Sign Up</NavLinks>
+              <NavLinks to='contact'>Contact</NavLinks>
             </NavItem>
           </NavMenu>
         </NavbarContainer>
