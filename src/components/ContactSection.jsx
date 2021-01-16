@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
+import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 const ContactSection = () => {
   const [name, setName] = useState("");
@@ -9,8 +11,29 @@ const ContactSection = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const sendEmail = () => {
-    console.log("Email send");
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_x3dz9dq",
+        "template_g66e7dp",
+        e.target,
+        process.env.USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Thank you for you message 😊");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error(
+            "Service error ✖ Please contact me at nejcrogelsek0@gmail.com"
+          );
+        }
+      );
   };
 
   return (
@@ -28,6 +51,7 @@ const ContactSection = () => {
                       id='input-name'
                       placeholder='Your Name :'
                       value={name}
+                      name='name'
                       onChange={(e) => setName(e.target.value)}
                     />
                   </div>
@@ -37,6 +61,7 @@ const ContactSection = () => {
                       id='input-email'
                       placeholder='Email :'
                       value={email}
+                      name='email'
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
@@ -46,6 +71,7 @@ const ContactSection = () => {
                       id='input-subject'
                       placeholder='Subject :'
                       value={subject}
+                      name='subject'
                       onChange={(e) => setSubject(e.target.value)}
                     />
                   </div>
@@ -55,6 +81,7 @@ const ContactSection = () => {
                       id='textarea-message'
                       cols='30'
                       rows='10'
+                      name='message'
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}></textarea>
                   </div>
