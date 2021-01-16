@@ -37,7 +37,7 @@ const ToolSection = () => {
           </div>
           <div className='col-12 col-sm-6 col-md-4 reusable-item'>
             <img src={slack} alt='Slack' />
-            <h5>slack</h5>
+            <h5>Slack</h5>
           </div>
           <div className='col-12 col-sm-6 col-md-4 reusable-item'>
             <img src={AdobePhotoshop} alt='Adobe Photoshop' />

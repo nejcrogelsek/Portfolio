@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AboutSection from "../components/AboutSection";
 import HeroSection from "../components/HeroSection";
+import Footer from "../components/layouts/Footer";
 import Header from "../components/layouts/Header";
 import Sidebar from "../components/layouts/Sidebar";
 import SkillsSection from "../components/SkillsSection";
@@ -22,6 +23,8 @@ const Home = () => {
       {/* Projects section */}
       <SkillsSection />
       <ToolsSection />
+      {/* Contact Form */}
+      <Footer />
     </>
   );
 };

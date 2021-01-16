@@ -41,19 +41,21 @@ const AboutSection = () => {
             <h3>Let’s build something cool.</h3>
             <p>
               <span>Mail: </span>
-              <a href='mailto:nejcrogelsek0@gmail.com' target='blank'>
+              <a href='mailto:nejcrogelsek0@gmail.com' target='_blank'>
                 nejcrogelsek0@gmail.com
               </a>
             </p>
             <p>
               <span>LinkedIn: </span>
-              <a href='https://www.linkedin.com/in/nejcrogelsek' target='blank'>
+              <a
+                href='https://www.linkedin.com/in/nejcrogelsek'
+                target='_blank'>
                 https://www.linkedin.com/in/nejcrogelsek
               </a>
             </p>
             <p>
               <span>GitHub: </span>
-              <a href='https://github.com/nejcrogelsek' target='blank'>
+              <a href='https://github.com/nejcrogelsek' target='_blank'>
                 https://github.com/nejcrogelsek
               </a>
             </p>

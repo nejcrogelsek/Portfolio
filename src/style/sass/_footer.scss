@@ -1,0 +1,33 @@
+footer {
+  height: 265px;
+  background: #111;
+  color: #fff;
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+    > .col-12 {
+      &:nth-child(1) {
+        margin-top: 75px;
+      }
+      &:nth-child(2) {
+        margin-top: 50px;
+      }
+      > a {
+        color: #fff;
+        margin: 0 12px;
+        transition: 0.3s;
+        > .MuiSvgIcon-root {
+          transform: scale(1.3);
+        }
+        &:hover {
+          color: $blue;
+        }
+      }
+      > p {
+        font-size: 1rem;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+      }
+    }
+  }
+}
