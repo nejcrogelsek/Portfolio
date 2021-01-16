@@ -1,7 +1,7 @@
 import React from "react";
-import image1 from "../assets/images/img1.jpg";
 import image2 from "../assets/images/img2.jpg";
-import image3 from "../assets/images/img5.jpg";
+import { VscArrowDown } from "react-icons/vsc";
+import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 
 const HeroSection = () => {
   const openResume = () => {
@@ -11,6 +11,11 @@ const HeroSection = () => {
     <section id='hero'>
       <div className='heroBg'>
         <img src={image2} alt='Napaka pri povezavi.' />
+        <span className='hero-arrow'>
+          <a className='smoth-scroll' href='#about'>
+            <ArrowDownwardIcon />
+          </a>
+        </span>
         <div className='container'>
           <div className='row'>
             <div className='col-12 hero-content'>
