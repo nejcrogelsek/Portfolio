@@ -14,65 +14,65 @@ import SASS from "../assets/images/skills/sass.svg";
 
 const SkillsSection = () => {
   return (
-    <section id='skills'>
+    <section id='skills' className='reusable-container'>
       <div className='container'>
-        <div className='row text-center'>
+        <div className='row text-center reusable-top-section'>
           <div className='col-12'>
             <h2>Skills</h2>
           </div>
           <div className='col-12'>
             <p>
               Languages and Technologies that I have learned and applied to my
-              projects
+              projects.
             </p>
           </div>
         </div>
-        <div className='row justify-content-center skills-wrapper'>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+        <div className='row justify-content-center reusable-wrapper'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={JavaScript} alt='JavaScript' />
             <h5>JavaScript (ES5/ES6)</h5>
           </div>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={ReactJS} alt='ReactJS' />
             <h5>React.js</h5>
           </div>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={Redux} alt='Redux' />
             <h5>Redux</h5>
           </div>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={Firebase} alt='Firebase' />
             <h5>Firebase Realtime Database</h5>
           </div>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={NodeJS} alt='NodeJS' />
             <h5>Node.js</h5>
           </div>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={Express} alt='Express' />
             <h5>Express</h5>
           </div>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={MongoDB} alt='MongoDB' />
             <h5>MongoDB</h5>
           </div>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={Django} alt='Django' />
             <h5>Django</h5>
           </div>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={HTML5} alt='HTML5' />
             <h5>HTML5</h5>
           </div>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={CSS3} alt='CSS3' />
             <h5>CSS 3</h5>
           </div>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={Bootstrap4} alt='Bootstrap4' />
             <h5>Bootstrap 4</h5>
           </div>
-          <div className='col-12 col-sm-6 col-md-3 skill-item'>
+          <div className='col-12 col-sm-6 col-md-3 reusable-item'>
             <img src={SASS} alt='SASS' />
             <h5>SASS</h5>
           </div>
