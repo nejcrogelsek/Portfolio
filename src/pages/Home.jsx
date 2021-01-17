@@ -7,6 +7,7 @@ import Header from "../components/layouts/Header";
 import Sidebar from "../components/layouts/Sidebar";
 import SkillsSection from "../components/SkillsSection";
 import ToolsSection from "../components/ToolsSection";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,7 @@ const Home = () => {
       <ToolsSection />
       <ContactSection />
       <Footer />
+      <ScrollToTop />
     </>
   );
 };

@@ -4,3 +4,25 @@
 @import "./skills&tools";
 @import "./contact";
 @import "./footer";
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid $blue;
+  transition: 0.3s;
+  color: #fff;
+  background: $blue;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: #fff;
+  }
+  > .MuiSvgIcon-root {
+    width: 100%;
+    height: 100%;
+  }
+}
