@@ -81,8 +81,35 @@ export const NavLinks = styled(LinkS)`
   height: 100%;
   cursor: pointer;
   border-bottom: 3px solid transparent;
-
+  &::before {
+    content: "-";
+    margin-right: 5px;
+    color: transparent;
+    transform: scaleX(2);
+  }
   &.active {
-    border-bottom: 3px solid #01bf71;
+    &::before {
+      content: "-";
+      margin-right: 5px;
+      color: #fff;
+      animation: animateActiveLink 0.3s;
+    }
+  }
+  &:hover {
+    &::before {
+      color: #fff;
+      animation: animateActiveLink 0.3s;
+    }
+  }
+  @keyframes animateActiveLink {
+    0% {
+      transform: scaleX(0);
+    }
+    50% {
+      transform: scaleX(1);
+    }
+    100% {
+      transform: scaleX(2);
+    }
   }
 `;
