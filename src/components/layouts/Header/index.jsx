@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import Favicon from "../../../assets/images/favicon.png";
+import { animateScroll as scroll } from "react-scroll";
 import {
   Nav,
   NavbarContainer,
@@ -10,8 +11,6 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  NavBtn,
-  NavBtnLink,
   NavLogoImg,
 } from "./HeaderElements";
 
@@ -26,6 +25,10 @@ const Header = ({ toggle }) => {
     }
   };
 
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
   }, []);
@@ -34,7 +37,7 @@ const Header = ({ toggle }) => {
     <>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer className='container'>
-          <NavLogo to='/'>
+          <NavLogo to='/' onClick={toggleHome}>
             <NavLogoImg src={Favicon} alt='NR' />
           </NavLogo>
           <MobileIcon onClick={toggle}>
@@ -42,19 +45,60 @@ const Header = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to='hero'>Home</NavLinks>
+              <NavLinks
+                to='hero'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={0}>
+                Home
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='about'>About</NavLinks>
+              <NavLinks
+                to='about'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={0}>
+                About
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='skills'>Skills</NavLinks>
+              <NavLinks
+                to='skills'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={0}>
+                Skills
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='tools'>Tools</NavLinks>
+              <NavLinks
+                to='tools'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={0}>
+                Tools
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='contact'>Contact</NavLinks>
+              <NavLinks
+                to='contact'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={0}
+                activeClass='active'>
+                Contact
+              </NavLinks>
             </NavItem>
           </NavMenu>
         </NavbarContainer>
