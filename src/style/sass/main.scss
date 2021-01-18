@@ -27,3 +27,16 @@
     height: 100%;
   }
 }
+#loading-container {
+  width: 100%;
+  height: 100vh;
+  background: $blue;
+  > div {
+    position: fixed;
+    top: 45%;
+    right: 50%;
+    > svg {
+      color: #fff;
+    }
+  }
+}
