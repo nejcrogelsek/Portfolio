@@ -1,5 +1,8 @@
 import React from "react";
 import image from "../assets/images/image1.png";
+import image2 from "../assets/images/image2.png";
+import image3 from "../assets/images/image3.png";
+import image4 from "../assets/images/image4.png";
 
 const ProjectsSection = () => {
   const openProject = () => {
@@ -20,7 +23,7 @@ const ProjectsSection = () => {
           </div>
         </div>
         <div className='row projects-wrapper'>
-          <div className='col-12 col-md-6 col-lg-4 project-item-wrapper'>
+          <div className='project-item-wrapper'>
             <div className='project-item'>
               <div className='project-item-image'>
                 <img src={image} alt='Project image' />
@@ -37,10 +40,10 @@ const ProjectsSection = () => {
               </div>
             </div>
           </div>
-          <div className='col-12 col-md-6 col-lg-4 project-item-wrapper'>
+          <div className='project-item-wrapper'>
             <div className='project-item'>
               <div className='project-item-image'>
-                <img src={image} alt='Project image' />
+                <img src={image2} alt='Project image' />
               </div>
               <div className='project-item-content'>
                 <h3>Get Cookin</h3>
@@ -54,10 +57,10 @@ const ProjectsSection = () => {
               </div>
             </div>
           </div>
-          <div className='col-12 col-md-6 col-lg-4 project-item-wrapper'>
+          <div className='project-item-wrapper'>
             <div className='project-item'>
               <div className='project-item-image'>
-                <img src={image} alt='Project image' />
+                <img src={image3} alt='Project image' />
               </div>
               <div className='project-item-content'>
                 <h3>Get Cookin</h3>
@@ -71,78 +74,10 @@ const ProjectsSection = () => {
               </div>
             </div>
           </div>
-          <div className='col-12 col-md-6 col-lg-4 project-item-wrapper'>
+          <div className='project-item-wrapper'>
             <div className='project-item'>
               <div className='project-item-image'>
-                <img src={image} alt='Project image' />
-              </div>
-              <div className='project-item-content'>
-                <h3>Get Cookin</h3>
-                <p>
-                  A dynamic web application made for home cooks who want to use
-                  up the items in their kitchen.
-                </p>
-                <button className='heroBtn-resume' onClick={openProject}>
-                  Read More
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className='col-12 col-md-6 col-lg-4 project-item-wrapper'>
-            <div className='project-item'>
-              <div className='project-item-image'>
-                <img src={image} alt='Project image' />
-              </div>
-              <div className='project-item-content'>
-                <h3>Get Cookin</h3>
-                <p>
-                  A dynamic web application made for home cooks who want to use
-                  up the items in their kitchen.
-                </p>
-                <button className='heroBtn-resume' onClick={openProject}>
-                  Read More
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className='col-12 col-md-6 col-lg-4 project-item-wrapper'>
-            <div className='project-item'>
-              <div className='project-item-image'>
-                <img src={image} alt='Project image' />
-              </div>
-              <div className='project-item-content'>
-                <h3>Get Cookin</h3>
-                <p>
-                  A dynamic web application made for home cooks who want to use
-                  up the items in their kitchen.
-                </p>
-                <button className='heroBtn-resume' onClick={openProject}>
-                  Read More
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className='col-12 col-md-6 col-lg-4 project-item-wrapper'>
-            <div className='project-item'>
-              <div className='project-item-image'>
-                <img src={image} alt='Project image' />
-              </div>
-              <div className='project-item-content'>
-                <h3>Get Cookin</h3>
-                <p>
-                  A dynamic web application made for home cooks who want to use
-                  up the items in their kitchen.
-                </p>
-                <button className='heroBtn-resume' onClick={openProject}>
-                  Read More
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className='col-12 col-md-6 col-lg-4 project-item-wrapper'>
-            <div className='project-item'>
-              <div className='project-item-image'>
-                <img src={image} alt='Project image' />
+                <img src={image4} alt='Project image' />
               </div>
               <div className='project-item-content'>
                 <h3>Get Cookin</h3>
