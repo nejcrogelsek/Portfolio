@@ -68,6 +68,17 @@ const Header = ({ toggle }) => {
             </NavItem>
             <NavItem>
               <NavLinks
+                to='projects'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact='true'
+                offset={0}>
+                Projects
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
                 to='skills'
                 smooth={true}
                 duration={500}

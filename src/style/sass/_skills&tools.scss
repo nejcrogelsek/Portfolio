@@ -1,6 +1,6 @@
 .reusable-container {
   width: 100%;
-  padding: 100px 0 90px;
+  padding: 100px 0 0;
   @media #{$desktop} {
     height: 100vh;
   }
@@ -8,6 +8,7 @@
 .reusable-top-section {
   h2 {
     font-size: 2.8125rem;
+    font-weight: 700;
   }
   p {
     font-family: "Lato", sans-serif;

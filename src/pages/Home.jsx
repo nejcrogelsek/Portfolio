@@ -8,6 +8,7 @@ import Sidebar from "../components/layouts/Sidebar";
 import SkillsSection from "../components/SkillsSection";
 import ToolsSection from "../components/ToolsSection";
 import ScrollToTop from "../components/ScrollToTop";
+import ProjectsSection from "../components/ProjectsSection";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ const Home = () => {
       <Header toggle={toggle} />
       <HeroSection />
       <AboutSection />
-      {/* Projects section */}
+      <ProjectsSection />
       <SkillsSection />
       <ToolsSection />
       <ContactSection />

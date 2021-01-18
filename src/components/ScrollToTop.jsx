@@ -17,7 +17,7 @@ const BackToTopBtn = styled(LinkS)`
   background: #111;
   opacity: ${({ visibility }) => (visibility ? "1" : "0")};
   &:hover {
-    cursor: pointer;
+    cursor: ${({ visibility }) => (visibility ? "pointer" : "auto")};
     transform: scale(1.1);
     color: #fff;
   }
