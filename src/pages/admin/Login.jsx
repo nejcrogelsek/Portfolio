@@ -12,7 +12,6 @@ function Login() {
 
   useEffect(() => {
     if (user) {
-      auth.signOut();
       history.push("/");
     }
   }, [user]);
