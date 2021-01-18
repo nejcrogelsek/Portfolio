@@ -27,19 +27,19 @@ const HeroSection = () => {
           <div className='row'>
             <div className='col-12 hero-content'>
               <h1>
-                <span class='wiggly-font'>N</span>
-                <span class='wiggly-font'>E</span>
-                <span class='wiggly-font'>J</span>
-                <span class='wiggly-font'>C</span>
+                <span className='wiggly-font'>N</span>
+                <span className='wiggly-font'>E</span>
+                <span className='wiggly-font'>J</span>
+                <span className='wiggly-font'>C</span>
                 <br />
-                <span class='wiggly-font'>R</span>
-                <span class='wiggly-font'>O</span>
-                <span class='wiggly-font'>G</span>
-                <span class='wiggly-font'>E</span>
-                <span class='wiggly-font'>L</span>
-                <span class='wiggly-font'>Š</span>
-                <span class='wiggly-font'>E</span>
-                <span class='wiggly-font'>K</span>
+                <span className='wiggly-font'>R</span>
+                <span className='wiggly-font'>O</span>
+                <span className='wiggly-font'>G</span>
+                <span className='wiggly-font'>E</span>
+                <span className='wiggly-font'>L</span>
+                <span className='wiggly-font'>Š</span>
+                <span className='wiggly-font'>E</span>
+                <span className='wiggly-font'>K</span>
               </h1>
               <div className='heroAnim-wrapper'>
                 <Typical

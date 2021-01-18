@@ -48,7 +48,11 @@ function App() {
               <Home />
             </Route>
             <Route exact path='/test'>
-              {user ? <Navbar /> : <Login />}
+              {user && user.uid === process.env.REACT_APP_ADMIN_UID ? (
+                <Navbar />
+              ) : (
+                <Login />
+              )}
             </Route>
           </Switch>
         </Router>

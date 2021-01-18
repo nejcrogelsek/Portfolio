@@ -88,14 +88,11 @@ export default function Navbar() {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
 
-  const [page, setPage] = useState(true);
-
   const logout = () => {
     try {
       auth.signOut();
-      toast.success("Odjava uspešna!");
     } catch {
-      toast.error("Odjava neuspešna!");
+      alert("Napaka pri povezavi!");
     }
   };
 

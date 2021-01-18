@@ -15,9 +15,9 @@ const BackToTopBtn = styled(LinkS)`
   transition: 0.3s;
   color: #fff;
   background: #111;
-  opacity: ${({ visibility }) => (visibility ? "1" : "0")};
+  opacity: ${({ isvisible }) => (isvisible ? "1" : "0")};
   &:hover {
-    cursor: ${({ visibility }) => (visibility ? "pointer" : "auto")};
+    cursor: ${({ isvisible }) => (isvisible ? "pointer" : "auto")};
     transform: scale(1.1);
     color: #fff;
   }
@@ -41,7 +41,7 @@ const ScrollToTop = () => {
   }, []);
   return (
     <BackToTopBtn
-      visibility={visibility}
+      isvisible={visibility ? 1 : 0}
       to='hero'
       smooth={true}
       duration={500}
