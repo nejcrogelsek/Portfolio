@@ -78,3 +78,56 @@
     }
   }
 }
+
+.projectModal-animation {
+  width: 100%;
+  @media (min-width: 500px) {
+    width: 500px;
+  }
+  @media #{$huge} {
+    width: 550px;
+  }
+}
+.m-header {
+  position: relative;
+  height: 45px;
+  > h5 {
+    width: max-content;
+    margin: 0 auto;
+    line-height: 45px;
+  }
+  > svg {
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 5px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.m-body .m-body-content {
+  padding: 10px;
+  .m-technologies-list {
+    > li {
+      list-style: none;
+      display: inline-block;
+      width: max-content;
+      border: 1px solid $blue;
+      border-radius: 23px;
+      padding: 5px 15px;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+  .m-button {
+    display: block;
+  }
+}
