@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/userSlice";
 import LockIcon from "@material-ui/icons/Lock";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 function Login() {
   const history = useHistory();
