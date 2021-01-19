@@ -20,7 +20,7 @@ const AdminProjects = () => {
         website: website,
         github: github,
         technologies: technologies,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        created_at: firebase.firestore.FieldValue.serverTimestamp(),
       })
       .then(() => {
         toast.success("New project added.");
