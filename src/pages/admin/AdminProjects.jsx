@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import db from "../../firebase";
+import db, { storage } from "../../firebase";
 import firebase from "firebase";
 
 const AdminProjects = () => {
@@ -11,6 +11,48 @@ const AdminProjects = () => {
   const [technologies, setTechnologies] = useState([]);
   const [newTech, setNewTech] = useState("");
 
+  const [image, setImage] = useState(null);
+  const [url, setUrl] = useState(null);
+  const [progress, setProgress] = useState(0);
+
+  const handleFileChange = (e) => {
+    e.preventDefault();
+    if (e.target.files[0]) {
+      setImage(e.target.files[0]);
+    }
+  };
+
+  const handleImage = (e) => {
+    e.preventDefault();
+    if (image) {
+      const uploadImage = storage.ref(`projects/${image.name}`).put(image);
+      uploadImage.on(
+        "state_changed",
+        (snapshot) => {
+          const progress = Math.round(
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+          );
+          setProgress(progress);
+        },
+        (error) => {
+          alert(error.message);
+        },
+        () => {
+          storage
+            .ref("projects")
+            .child(image.name)
+            .getDownloadURL()
+            .then((url) => {
+              setUrl(url);
+              toast.success("Image successfully added.");
+            });
+          setImage(null);
+          setProgress(0);
+        }
+      );
+    }
+  };
+
   const addProject = (e) => {
     e.preventDefault();
     db.collection("projects")
@@ -20,6 +62,7 @@ const AdminProjects = () => {
         website: website,
         github: github,
         technologies: technologies,
+        url: url,
         created_at: firebase.firestore.FieldValue.serverTimestamp(),
       })
       .then(() => {
@@ -30,6 +73,7 @@ const AdminProjects = () => {
         setGithub("");
         setTechnologies([]);
         setNewTech("");
+        setUrl("");
       })
       .catch((error) => {
         alert(error);
@@ -64,6 +108,17 @@ const AdminProjects = () => {
         />
         <button type='submit'>Add Technology</button>
       </form>
+      <h3>Add project image</h3>
+      <form onSubmit={handleImage} className='form-admin-project'>
+        <input
+          type='file'
+          name='image'
+          id='image'
+          onChange={handleFileChange}
+        />
+        <button type='submit'>Add Image</button>
+      </form>
+      <span>Image upload progess:</span> <progress max='100' value={progress} />
       <form onSubmit={addProject} className='form-admin-project'>
         <input
           type='text'

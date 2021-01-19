@@ -26,7 +26,7 @@ function App() {
             email: authUser.email,
           })
         );
-        console.log(authUser.uid);
+        //console.log(authUser.uid);
       } else {
         //console.log("odjavlen");
         dispatch(logout());
@@ -51,6 +51,7 @@ function App() {
               website: doc.data().website,
               github: doc.data().github,
               technologies: doc.data().technologies,
+              url: doc.data().url,
             }))
           )
         );

@@ -1,7 +1,13 @@
 import React from "react";
-import image from "../assets/images/image1.png";
 
-const ProjectBox = ({ title, description, website, github, technologies }) => {
+const ProjectBox = ({
+  title,
+  description,
+  website,
+  github,
+  technologies,
+  url,
+}) => {
   const openProject = () => {
     console.log("Projekt ODPRT!");
   };
@@ -9,7 +15,7 @@ const ProjectBox = ({ title, description, website, github, technologies }) => {
     <div className='project-item-wrapper'>
       <div className='project-item'>
         <div className='project-item-image'>
-          <img src={image} alt='Project image' />
+          <img src={url} alt='Project image' />
         </div>
         <div className='project-item-content'>
           <h3>{title}</h3>

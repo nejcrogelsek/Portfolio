@@ -25,7 +25,15 @@ const ProjectsSection = () => {
         </div>
         <div className='row projects-wrapper'>
           {allProjects.map(
-            ({ id, title, description, website, github, technologies }) => (
+            ({
+              id,
+              title,
+              description,
+              website,
+              github,
+              technologies,
+              url,
+            }) => (
               <ProjectBox
                 key={id}
                 title={title}
@@ -33,6 +41,7 @@ const ProjectsSection = () => {
                 website={website}
                 github={github}
                 technologies={technologies}
+                url={url}
               />
             )
           )}
