@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import db from "../../firebase"
 
 const AdminProjects = () => {
@@ -11,8 +12,29 @@ const AdminProjects = () => {
 
   const addProject = (e) =>{
     e.preventDefault();
-    console.log("dodaj projekt")
+      db.collection("projects")
+      .add({
+        title: title,
+        description: description,
+        website: website,
+        github: github,
+        technologies: technologies
+      })
+      .then(()=>{
+        toast.success("New project added.")
+        setTitle("")
+        setDescription("")
+        setWebsite("")
+        setGithub("")
+        setTechnologies([])
+        setNewTech("")
+      })
+      .catch((error) =>{
+        alert(error)
+      })
+    
   }
+
   const addTechnology = (e) =>{
     e.preventDefault();
     try{
@@ -26,7 +48,7 @@ const AdminProjects = () => {
   return <main id="admin-projects">
     <h2>Add new project</h2>
     <p>{technologies.map(item =>(
-      <span>{item}, </span>
+      <span key={item}>{item}, </span>
     ))}</p>
     <form onSubmit={addTechnology} className="form-add-project">
       <input type="text" name="new-tech" id="new-tech" placeholder="Add Technology" onChange={e=>setNewTech(e.target.value)} />
