@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { auth } from "./firebase";
+import db, { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 import { ToastContainer } from "react-toastify";
@@ -35,6 +35,14 @@ function App() {
       unsubscribe();
     };
   }, [dispatch]);
+
+  useEffect(() => {
+    db.collection("projects")
+      .orderBy("created_at", "desc")
+      .onSnapshot((snapshot) => {
+        setIsLoading(false);
+      });
+  }, []);
 
   return (
     <>
