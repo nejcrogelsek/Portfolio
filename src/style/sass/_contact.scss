@@ -1,6 +1,9 @@
 #contact {
-  /*padding-top: 100px;*/
+  padding-top: 100px;
   padding-bottom: 90px;
+  @media #{$desktop} {
+    padding-top: 0;
+  }
 }
 .form-wrapper {
   > h2 {

@@ -1,0 +1,34 @@
+#admin-projects {
+  > h2 {
+    text-transform: uppercase;
+  }
+  > p {
+    margin-top: 10px;
+  }
+  > form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 35px;
+    > input {
+      height: 35px;
+      padding: 5px;
+      margin: 5px 0;
+    }
+    > button {
+      width: 150px;
+      padding: 10px 0;
+      margin: 0 auto;
+      margin-top: 5px;
+      border: 1px solid $blue;
+      background-color: $blue;
+      color: #fff;
+      transition: 0.3s;
+      &:hover {
+        background-color: #fff;
+        color: $blue;
+      }
+    }
+  }
+}

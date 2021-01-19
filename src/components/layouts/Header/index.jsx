@@ -106,7 +106,7 @@ const Header = ({ toggle }) => {
                 duration={500}
                 spy={true}
                 exact='true'
-                offset={0}
+                offset={-100}
                 activeClass='active'>
                 Contact
               </NavLinks>
