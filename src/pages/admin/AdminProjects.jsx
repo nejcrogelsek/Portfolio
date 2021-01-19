@@ -55,7 +55,7 @@ const AdminProjects = () => {
       <button type="submit">Add Technology</button>
     </form>
     <form onSubmit={addProject} className="form-add-project">
-      <input type="text" name="title" id="title" placeholder="Title" onChange={e=>setDescription(e.target.value)} />
+      <input type="text" name="title" id="title" placeholder="Title" onChange={e=>setTitle(e.target.value)} />
       <input type="text" name="description" id="description" placeholder="Description" onChange={e=>setDescription(e.target.value)} />
       <input type="text" name="website-link" id="website-link" placeholder="Website link" onChange={e=>setWebsite(e.target.value)} />
       <input type="text" name="github-link" id="github-link" placeholder="Github link" onChange={e=>setGithub(e.target.value)} />
