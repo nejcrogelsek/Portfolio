@@ -1,10 +1,8 @@
 import React from "react";
 import MyProfile from "../assets/images/avatar.jpg";
+import Resume from "../assets/pdf/resume.pdf";
 
 const AboutSection = () => {
-  const openResume = () => {
-    console.log("OPEN RESUME");
-  };
   return (
     <section id='about'>
       <div className='container'>
@@ -59,9 +57,9 @@ const AboutSection = () => {
                 https://github.com/nejcrogelsek
               </a>
             </p>
-            <button className='heroBtn-resume' onClick={openResume}>
+            <a href={Resume} className='heroBtn-resume'>
               Resume
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -60,6 +60,7 @@
       > p {
         text-transform: uppercase;
         margin: 0;
+        margin-bottom: 20px;
       }
     }
   }
@@ -78,6 +79,8 @@
   transition: 0.3s;
   &:hover {
     background: $blue;
+    text-decoration: none;
+    color: #fff;
   }
 }
 .linkBtn {

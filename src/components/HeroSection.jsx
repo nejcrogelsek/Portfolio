@@ -3,11 +3,9 @@ import image2 from "../assets/images/img2.jpg";
 import { Link as LinkS } from "react-scroll";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import Typical from "react-typical";
+import Resume from "../assets/pdf/resume.pdf";
 
 const HeroSection = () => {
-  const openResume = () => {
-    console.log("OPEN RESUME");
-  };
   return (
     <section id='hero'>
       <div className='heroBg'>
@@ -48,9 +46,9 @@ const HeroSection = () => {
                   wrapper='p'
                 />
               </div>
-              <button className='heroBtn-resume' onClick={openResume}>
+              <a href={Resume} className='heroBtn-resume'>
                 Resume
-              </button>
+              </a>
             </div>
           </div>
         </div>
