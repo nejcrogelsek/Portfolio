@@ -22,11 +22,11 @@ function App() {
       if (authUser) {
         dispatch(
           login({
-            uid: "123",
+            uid: authUser.uid,
             email: authUser.email,
           })
         );
-        //console.log(authUser.uid);
+        console.log(authUser.uid);
       } else {
         //console.log("odjavlen");
         dispatch(logout());
@@ -71,7 +71,11 @@ function App() {
               <Home />
             </Route>
             <Route exact path='/test'>
-              {user && user.uid === "123" ? <Navbar /> : <Login />}
+              {user && user.uid === process.env.REACT_APP_USER_ID ? (
+                <Navbar />
+              ) : (
+                <Login />
+              )}
             </Route>
           </Switch>
         </Router>

@@ -19,22 +19,20 @@ const AboutSection = () => {
               From Slovenia.
             </h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
-              similique commodi optio amet natus recusandae ut harum. Ut in
-              commodi voluptatibus ab omnis hic libero aperiam atque numquam,
-              ullam expedita.
+              Through High School and self taught education, I have developed a
+              strong understanding of JavaScript (ES5 & ES6), React, Node.js,
+              Express, relational and non relational database (PostgreSQL,
+              MongoDB), HTML5, and CSS3. As a developer, I find a lot of joy and
+              excitement utilizing my skills to help troubleshoot bugs and
+              pushing projects forward. I enjoy learning new technologies and
+              growing in a field that is constantly being pushed to new
+              boundaries.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              itaque consequuntur velit quisquam a. Quasi exercitationem
-              perferendis placeat tempora? Hic, quis sed! Sint nostrum eveniet,
-              voluptate exercitationem sapiente laboriosam! Saepe?
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus qui nostrum ratione, ullam, dolorem harum cupiditate
-              modi quis porro architecto perferendis maiores a? Nobis natus unde
-              aspernatur? Suscipit, officiis est.
+              Feel free to connect with me! Let's talk about web dev, tech,
+              sports, music, video games, or how I can be of help to your team
+              or business! I'd love to get to know more developers and expand my
+              network.
             </p>
             <h3>Let’s build something cool.</h3>
             <p>

@@ -19,7 +19,7 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 9vh;
   z-index: 1;
   width: 100%;
 `;
@@ -36,7 +36,10 @@ export const NavLogo = styled(LinkR)`
 `;
 
 export const NavLogoImg = styled.img`
-  height: 50px;
+  height: 40px;
+  @media screen and (min-width: 768px) {
+    height: 50px;
+  }
 `;
 
 export const MobileIcon = styled.div`

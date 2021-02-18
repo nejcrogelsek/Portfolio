@@ -5,10 +5,6 @@ import { useSelector } from "react-redux";
 
 const ProjectsSection = () => {
   const allProjects = useSelector(selectProjects);
-
-  useEffect(() => {
-    console.log(allProjects);
-  }, []);
   return (
     <section id='projects' className='projects-container'>
       <div className='container'>
